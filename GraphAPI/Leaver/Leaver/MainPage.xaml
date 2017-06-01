@@ -16,7 +16,7 @@
     
     <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20" Spacing="10">
         <Label x:Name="Username"/>
-        <Button x:Name="Authenticate" Text="Verify Me" Clicked="Authenticate_Clicked"/>
+        <Button x:Name="Authenticate" Text="Authenticator" Clicked="Authenticate_Clicked"/>
         <Button x:Name="FullDayLeave" Text="Full Day Leave" Clicked="FullDayLeave_Clicked"/>
         <Button x:Name="TimeOffForSometimes" Text="Half Day Leave" Clicked="TimeOffForSometimes_Clicked"/>
         <Label x:Name="Status" FontSize="Small"/>

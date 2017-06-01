@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Microsoft.Identity.Client;
 
 namespace Leaver.iOS
 {
@@ -24,8 +25,14 @@ namespace Leaver.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
+            App.IdentityClientApp.RedirectUri = "msal7214e6cd-85ad-4433-9d13-f2631e1d4142://auth";
             return base.FinishedLaunching(app, options);
+        }
+
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(url);
+            return true;
         }
     }
 }
