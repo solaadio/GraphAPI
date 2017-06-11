@@ -11,7 +11,7 @@ namespace Leaver
     public partial class App : Application
     {
         public static PublicClientApplication IdentityClientApp = null;
-        public static string ClientID = "7214e6cd-85ad-4433-9d13-f2631e1d4142";
+        public static string ClientID = "9059082d-b0f4-4cdd-aab3-079fa3a906b8";
         public static string[] Scopes = { "User.Read", "User.ReadBasic.All ", "Mail.Send" };
         public static UIParent UiParent = null;
         public App()

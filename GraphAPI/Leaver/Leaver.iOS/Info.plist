@@ -61,5 +61,7 @@
 			<string>None</string>
 		</dict>
 	</array>
+	<key>CFBundleName</key>
+	<string>Leaver</string>
 </dict>
 </plist>
