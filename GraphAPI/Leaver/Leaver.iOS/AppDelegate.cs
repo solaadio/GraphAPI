@@ -25,7 +25,7 @@ namespace Leaver.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-            App.IdentityClientApp.RedirectUri = "msal7214e6cd-85ad-4433-9d13-f2631e1d4142://auth";
+            App.IdentityClientApp.RedirectUri = "msal9059082d-b0f4-4cdd-aab3-079fa3a906b8://auth";
             return base.FinishedLaunching(app, options);
         }
 
