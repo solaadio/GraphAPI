@@ -56,11 +56,11 @@ namespace Leaver
                          async (requestMessage) =>
                          {
                              // var tokenRequest = await App.IdentityClientApp.AcquireTokenAsync(App.Scopes, App.IdentityClientApp.Users.FirstOrDefault());
-                             var tokenRequest = await App.IdentityClientApp.AcquireTokenAsync(App.Scopes, App.IdentityClientApp.Users.FirstOrDefault());
+                             var tokenRequest = await App.IdentityClientApp.AcquireTokenAsync(App.Scopes, App.UiParent);
                              requestMessage.Headers.Authorization = new AuthenticationHeaderValue("bearer", tokenRequest.AccessToken);
                          }));
             Me = await Client.Me.Request().GetAsync();
-           // Manager = await Client.Me.Manager.Request().GetAsync();
+           Manager = await Client.Me.Manager.Request().GetAsync();
             Username.Text = $"Welcome {((User)Me).DisplayName}";
         }
 
