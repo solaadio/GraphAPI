@@ -55,11 +55,12 @@ namespace Leaver
                      new DelegateAuthenticationProvider(
                          async (requestMessage) =>
                          {
-                             var tokenRequest = await App.IdentityClientApp.AcquireTokenSilentAsync(App.Scopes, App.IdentityClientApp.Users.FirstOrDefault());
+                             // var tokenRequest = await App.IdentityClientApp.AcquireTokenAsync(App.Scopes, App.IdentityClientApp.Users.FirstOrDefault());
+                             var tokenRequest = await App.IdentityClientApp.AcquireTokenAsync(App.Scopes, App.IdentityClientApp.Users.FirstOrDefault());
                              requestMessage.Headers.Authorization = new AuthenticationHeaderValue("bearer", tokenRequest.AccessToken);
                          }));
             Me = await Client.Me.Request().GetAsync();
-            Manager = await Client.Me.Manager.Request().GetAsync();
+           // Manager = await Client.Me.Manager.Request().GetAsync();
             Username.Text = $"Welcome {((User)Me).DisplayName}";
         }
 
